@@ -12,6 +12,84 @@
     <title>Chup Clinic</title>
 </head>
 
+<style>
+    .cardScroll {
+        animation: cardScroll 2s;
+        animation-timeline: view();
+        animation-range: entry 0% cover 50%;
+    }
+    .animate {
+        animation: viewScroll 2s;
+        animation-timeline: view();
+        animation-range: entry 0% cover 50%;
+    }
+    
+    .comeLeft {
+        animation: left 1.5s;
+        animation-timeline: view();
+        animation-range: entry 0% cover 50%;
+    }
+
+    .fadeIn {
+        animation: fadeIn 1.5s;
+    }
+
+    @keyframes left {
+        from {
+            transform: translateX(100px);
+            opacity: 0;
+            clip-path: inset(0 0 100% 100%);
+        }
+
+        to {
+            clip-path: inset(0 0 0 0);
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+    }
+
+    @keyframes fadeIn {
+        from {
+            transform: translateY(100px);
+            opacity: 0;
+            clip-path: inset(100% 100% 0 0);
+        }
+
+        to {
+            clip-path: inset(0 0 0 0);
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes viewScroll {
+        from {
+            transform: translateY(100px);
+            opacity: 0;
+            clip-path: inset(100% 100% 0 0);
+        }
+
+        to {
+            clip-path: inset(0 0 0 0);
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @keyframes cardScroll {
+        from {
+            transform: translateY(100px);
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+
 <body>
     <nav class="bg-[#FFEDE5] border-gray-200 py-2.5">
         <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
@@ -66,16 +144,9 @@
 
 
 
-
-
-    
-
-
-
-
-    <div class="bg-[#FFEDE5]">
+    <div class="bg-[#FFEDE5] overflow-hidden" style="overflow: hidden;">
         <div class="relative flex flex-col  items-center max-w-screen-xl px-4 mx-auto md:flex-row sm:px-6 p-8">
-            <div class="flex items-center py-5 md:w-1/2 md:pb-20 md:pt-10 md:p-8 md:pr-10 relative">
+            <div class="fadeIn flex items-center py-5 md:w-1/2 md:pb-20 md:pt-10 md:p-8 md:pr-10 relative">
                 <img src="./Docs/Images/star.png" class="absolute right-0 top-20 md:top-auto md:right-28 h-12 " alt="">
                 <div class="text-left">
                     <h2
@@ -96,7 +167,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex items-center py-5 md:w-1/2 md:pb-20 md:pt-10 md:pl-10">
+            <div class="fadeIn flex items-center py-5 md:w-1/2 md:pb-20 md:pt-10 md:pl-10">
                 <div class="relative w-full p-3 rounded  md:p-8">
                     <div class="rounded-lg bg-white text-black w-full ">
                         <img src="./Docs/Images/hero.png" class="max-w-[25rem] w-full" />
@@ -118,12 +189,12 @@
 
     <section class="text-gray-700 body-font bg-[#115934]">
         <div class="container px-5 pt-24 pb-10  mx-auto">
-            <h1 class="text-center text-[#FFEDE5] text-3xl mb-8 md:text-4xl font-bold">Clinic’s <span
+            <h1 class="animate text-center text-[#FFEDE5] text-3xl mb-8 md:text-4xl font-bold">Clinic’s <span
                     class="text-[#F26522]">Problem</span></h1>
             <div class="flex flex-wrap justify-center items-center  text-center">
                 <div class="p-4 max-w-80 w-full ">
                     <div
-                        class="border-2 relative bg-[#ffede5] border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
+                        class="border-2 cardScroll  relative bg-[#ffede5] border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
                         <img src="./Docs/Images/clinicStar.png" class="absolute h-10 -top-4 -left-4" alt="">
                         <h2 class="title-font font-medium text-4xl text-[#F26522] mb-4 ">60%</h2>
                         <p class="leading-relaxed text-[#115934]">Patients find the appointment scheduling difficult</p>
@@ -131,14 +202,14 @@
                 </div>
                 <div class="p-4 max-w-80 w-full ">
                     <div
-                        class="border-2 bg-[#ffede5] border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
+                        class="border-2 cardScroll  bg-[#ffede5] border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">
                         <h2 class="title-font font-medium text-4xl text-[#F26522] mb-4 ">50%</h2>
                         <p class="leading-relaxed text-[#115934]">Staff report delays accessing patient records</p>
                     </div>
                 </div>
                 <div class="p-4 max-w-80 w-full ">
                     <div
-                        class="border-2 bg-[#ffede5] border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110 relative">
+                        class="border-2 cardScroll  bg-[#ffede5] border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110 relative">
                         <img src="./Docs/Images/mark.png" class="absolute h-14 -bottom-2 -right-2" alt="">
                         <h2 class="title-font font-medium text-4xl text-[#F26522] mb-4 ">70%</h2>
                         <p class="leading-relaxed text-[#115934]">Patients report insufficient follow-up care</p>
@@ -156,8 +227,8 @@
 
 
     <section class="text-gray-700 body-font bg-[#FFEDE5]">
-        <div class="container px-5 pt-24 pb-10  mx-auto">
-            <h1 class="text-center text-[#115934] text-3xl mb-8 md:text-4xl font-bold "><span
+        <div class=" container px-5 pt-24 pb-10  mx-auto">
+            <h1 class="cardScroll text-center text-[#115934] text-3xl mb-8 md:text-4xl font-bold "><span
                     class="text-[#F26522] ">Optimizing</span> Healthcare
                 <span class="relative">
                     Solutions
@@ -165,15 +236,15 @@
                 </span>
             </h1>
             <div class="flex flex-wrap justify-center items-center  text-center">
-                <div class="p-4 max-w-80 w-full ">
+                <div class="p-4 cardScroll max-w-80 w-full ">
                     <div
                         class=" relative bg-[#FBF7F4] px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110 hover:shadow-lg">
                         <i
                             class="fa-regular fa-calendar-check title-font font-medium text-4xl text-[#F26522] mb-4 bg-[#FFEDE5] w-16 h-16 flex justify-center items-center mx-auto rounded-full"></i>
-                        <p class="leading-relaxed font-semibold max-w-[12rem] mx-auto text-[#115934]">helooooooooo</p>
+                        <p class="leading-relaxed font-semibold max-w-[12rem] mx-auto text-[#115934]">Enhance a more intuitive scheduling system</p>
                     </div>
                 </div>
-                <div class="p-4 max-w-80 w-full ">
+                <div class="p-4 cardScroll max-w-80 w-full ">
                     <div
                         class=" bg-[#FBF7F4] px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110 hover:shadow-lg">
                         <!-- <h2 class="title-font font-medium text-4xl text-[#F26522] mb-4 ">50%</h2> -->
@@ -183,7 +254,7 @@
                             of Data Management System</p>
                     </div>
                 </div>
-                <div class="p-4 max-w-80 w-full ">
+                <div class="p-4 cardScroll max-w-80 w-full ">
                     <div
                         class=" bg-[#FBF7F4] px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110 hover:shadow-lg relative">
                         <!-- <h2 class="title-font font-medium text-4xl text-[#F26522] mb-4 ">70%</h2> -->
@@ -203,11 +274,11 @@
     <!-- Our Features -->
 
     <div class="py-20 bd-[#FBF7F4] overflow-hidden" id="ourFeatures">
-        <section class="bg-white">
-            <h1 class="text-center text-[#115934] text-3xl mb-8 md:text-4xl font-bold ">Our <span
+        <section class="bg-white ">
+            <h1 class=" text-center text-[#115934] text-3xl mb-8 md:text-4xl font-bold ">Our <span
                     class="text-[#F26522] "> Feature</span>
             </h1>
-            <div class="grid max-w-screen-xl px-4 pt-10  mx-auto lg:gap-8 xl:gap-0 lg:grid-cols-12 ">
+            <div class="grid max-w-screen-xl px-4 pt-10  mx-auto lg:gap-8 xl:gap-0 lg:grid-cols-12  ">
 
                 <div class=" lg:mt-0 lg:col-span-5 lg:flex mx-auto">
                     <img src="./Docs/Images/feature1.png" class="max-w-[25rem] w-full p-5 sm:p-0 mb-9 lg:mb-0 md:mb-16"
@@ -341,11 +412,11 @@
     <div class="bg-[#ffede5] flex items-center justify-center min-h-screen md:p-4" id="chupVsOther">
 
         <div class="max-w-4xl w-full p-2 md:p-6 pt-16">
-            <h1 class="text-center text-[#115934]  text-3xl mb-8 md:text-4xl font-bold ">Chup Clinic <span
+            <h1 class="text-center text-[#115934] cardScroll  text-3xl mb-8 md:text-4xl font-bold ">Chup Clinic <span
                     class="text-[#F26522] "> VS Others</span>
             </h1>
 
-            <div class="overflow-x-auto mt-16">
+            <div class="overflow-x-auto mt-16 cardScroll">
                 <table class="w-full table-auto border-collapse">
                     <thead>
                         <tr class="text-white">
@@ -467,12 +538,12 @@
 
     <section class="text-gray-700 body-font bg-[#FFEDE5]">
         <div class="container px-5 pt-24 pb-10  mx-auto">
-            <h1 class="text-center text-[#115934] mb-8 text-xl max-w-[50rem] mx-auto p-2">
+            <h1 class="text-center text-[#115934] mb-8 animate text-xl max-w-[50rem] mx-auto p-2">
                 <b>Chup Clinic</b> is suitable for diverse clinical management needs, adaptable to various healthcare
                 facilities and medical environments.
             </h1>
-            <div class="flex flex-wrap justify-center items-center  text-center">
-                <div class="md:p-3 p-2 max-w-80 w-full ">
+            <div class="flex  flex-wrap justify-center items-center  text-center">
+                <div class="md:p-3 cardScroll p-2 max-w-80 w-full ">
                     <div
                         class=" relative bg-[#f1dbca] px-4 py-6 rounded-lg transform transition duration-500 hover:scale-105 hover:shadow-lg">
                         <img src="./Docs/Images/Management/1.png" class="max-h-[10rem] h-full mx-auto" alt="">
@@ -480,7 +551,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="md:p-3 p-2 max-w-80 w-full ">
+                <div class="md:p-3 cardScroll p-2 max-w-80 w-full ">
                     <div
                         class=" relative bg-[#f1dbca] px-4 py-6 rounded-lg transform transition duration-500 hover:scale-105 hover:shadow-lg">
                         <img src="./Docs/Images/Management/2.png" class="max-h-[10rem] h-full mx-auto" alt="">
@@ -488,14 +559,14 @@
                             Clinics</p>
                     </div>
                 </div>
-                <div class="md:p-3 p-2 max-w-80 w-full ">
+                <div class="md:p-3 cardScroll p-2 max-w-80 w-full ">
                     <div
                         class=" relative bg-[#f1dbca] px-4 py-6 rounded-lg transform transition duration-500 hover:scale-105 hover:shadow-lg">
                         <img src="./Docs/Images/Management/3.png" class="max-h-[10rem] h-full mx-auto" alt="">
                         <p class="leading-relaxed font-semibold max-w-[12rem] mx-auto text-[#115934]">Dental Clinics</p>
                     </div>
                 </div>
-                <div class="md:p-3 p-2 max-w-80 w-full ">
+                <div class="md:p-3 cardScroll p-2 max-w-80 w-full ">
                     <div
                         class=" relative bg-[#f1dbca] px-4 py-6 rounded-lg transform transition duration-500 hover:scale-105 hover:shadow-lg">
                         <img src="./Docs/Images/Management/4.png" class="max-h-[10rem] h-full mx-auto" alt="">
@@ -503,7 +574,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="md:p-3 p-2 max-w-80 w-full ">
+                <div class="md:p-3 cardScroll p-2 max-w-80 w-full ">
                     <div
                         class=" relative bg-[#f1dbca] px-4 py-6 rounded-lg transform transition duration-500 hover:scale-105 hover:shadow-lg">
                         <img src="./Docs/Images/Management/5.png" class="max-h-[10rem] h-full mx-auto" alt="">
@@ -511,7 +582,7 @@
                             Clinics</p>
                     </div>
                 </div>
-                <div class="md:p-3 p-2 max-w-80 w-full ">
+                <div class="md:p-3 cardScroll p-2 max-w-80 w-full ">
                     <div
                         class=" relative bg-[#f1dbca] px-4 py-6 rounded-lg transform transition duration-500 hover:scale-105 hover:shadow-lg">
                         <img src="./Docs/Images/Management/6.png" class="max-h-[8.4rem] h-full mx-auto" alt="">
@@ -519,7 +590,7 @@
                             Centers</p>
                     </div>
                 </div>
-                <div class="md:p-3 p-2 max-w-80 w-full ">
+                <div class="md:p-3 cardScroll p-2 max-w-80 w-full ">
                     <div
                         class=" relative bg-[#f1dbca] px-4 py-6 rounded-lg transform transition duration-500 hover:scale-105 hover:shadow-lg">
                         <img src="./Docs/Images/Management/7.png" class="max-h-[10rem] h-full mx-auto" alt="">
@@ -534,90 +605,112 @@
 
     <!-- all in one===================== -->
 
-    <div class="bg-[#115934]">
-        <div class="flex flex-wrap sm:py-8 pt-8  ">
-            <div class="w-full sm:w-8/12 mb-10">
-                <div class="container mx-auto h-full py-0 sm:py-10 max-w-[50rem] w-full sm:p-10">
-                    <header class="container px-4 lg:flex mt-10 items-center h-full lg:mt-0">
-                        <div class="w-full">
-                            <h1 class="text-3xl pb-4 lg:text-4xl font-bold max-w-md text-white"><span
-                                    class="text-[#F26522]">All-In-One </span> Solution: 6 Essential Modules & More Than
-                                15 Key Activities </h1>
-                            <p class="text-lg text-white mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Recusandae
-                                maiores neque eaque ea odit placeat, tenetur illum distinctio nulla voluptatum a
-                                corrupti
-                                beatae tempora aperiam quia id aliquam possimus aut.</p>
-                            <button
-                                class="bg-[#F26522] text-white text-lg font-medium px-6 py-3 rounded-full shadow">Explore
-                                Our Modules</button>
-                        </div>
-                    </header>
+    <div class="bg-[#115934] relative">
+        <div class="flex flex-wrap sm:py-8 pt-8 relative">
+            <div class="w-full relative z-20">
+                <div class="w-full sm:w-8/12">
+                    <div class="container mx-auto h-full py-0 sm:py-10 max-w-[50rem] w-full sm:p-10">
+                        <header class="container animate px-4 lg:flex mt-10 items-center h-full lg:mt-0">
+                            <div class="w-full">
+                                <h1 class="text-3xl pb-4 lg:text-4xl font-bold max-w-md text-white">
+                                    <span class="text-[#F26522]">All-In-One </span> Solution: 6 Essential Modules & More
+                                    Than 15 Key Activities
+                                </h1>
+                                <p class="text-lg text-white mb-5">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae maiores neque
+                                    eaque ea odit placeat, tenetur illum distinctio nulla voluptatum a corrupti beatae
+                                    tempora aperiam quia id aliquam possimus aut.
+                                </p>
+                                <button
+                                    class="bg-[#F26522] text-white text-lg font-medium px-6 py-3 rounded-full shadow">
+                                    Explore Our Modules
+                                </button>
+                            </div>
+                        </header>
+                    </div>
+                </div>
+                <div class="pb-5 max-w-[55rem] w-full mx-auto tags">
+                    <div
+                        class="flex max-w-[70rem] justify-center md:justify-start items-center w-full mx-auto flex-wrap gap-2 p-2 relative z-30">
+                        <!-- Row 1 -->
+                        <button
+                            class="bg-[#41795c] cardScroll text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
+                            <img src="./Docs/Images/allInOne/1.png" class="h-7" alt=""> Registration
+                        </button>
+                        <button
+                            class="bg-[#41795c] cardScroll text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
+                            <img src="./Docs/Images/allInOne/2.png" class="h-7" alt=""> Appointment Scheduling
+                        </button>
+                        <button
+                            class="bg-[#41795c] cardScroll text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
+                            <img src="./Docs/Images/allInOne/3.png" class="h-7" alt="">Inventory
+                        </button>
+
+                        <!-- Row 2 -->
+                        <button
+                            class="bg-[#41795c] cardScroll text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
+                            <img src="./Docs/Images/allInOne/4.png" class="h-7" alt=""> Billings
+                        </button>
+                        <button
+                            class="bg-[#41795c] cardScroll text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
+                            <img src="./Docs/Images/allInOne/5.png" class="h-7" alt=""> Marketing
+                        </button>
+                        <button
+                            class="bg-[#41795c] cardScroll text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
+                            <img src="./Docs/Images/allInOne/6.png" class="h-7" alt=""> Conduct Revenue Analysis
+                        </button>
+
+                        <!-- Row 3 -->
+                        <button
+                            class="bg-[#41795c] cardScroll text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
+                            <img src="./Docs/Images/allInOne/7.png" class="h-7" alt=""> Alert Notification
+                        </button>
+                        <button
+                            class="bg-[#41795c] cardScroll text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
+                            <img src="./Docs/Images/allInOne/8.png" class="h-7" alt=""> Prepare Medications
+                        </button>
+                        <button
+                            class="bg-[#41795c] cardScroll text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
+                            <img src="./Docs/Images/allInOne/9.png" class="h-7" alt=""> Patient QR Scanning
+                        </button>
+
+                        <!-- Row 4 -->
+                        <button
+                            class="bg-[#41795c] cardScroll text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
+                            <img src="./Docs/Images/allInOne/10.png" class="h-7" alt=""> Generate Bills
+                        </button>
+                        <button
+                            class="bg-[#41795c] cardScroll text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
+                            <img src="./Docs/Images/allInOne/11.png" class="h-7" alt=""> Consultation
+                        </button>
+                        <button
+                            class="bg-[#41795c] cardScroll text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
+                            <img src="./Docs/Images/allInOne/12.png" class="h-7" alt=""> Promote Clinic Services
+                        </button>
+
+                        <!-- Row 5 -->
+                        <button
+                            class="bg-[#41795c] cardScroll text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
+                            <img src="./Docs/Images/allInOne/13.png" class="h-7" alt=""> Patient Demographic
+                        </button>
+                        <button
+                            class="bg-[#41795c] cardScroll text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
+                            <img src="./Docs/Images/allInOne/14.png" class="h-7" alt=""> Reporting & Analytics
+                        </button>
+                        <button
+                            class="bg-[#41795c] cardScroll text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
+                            <img src="./Docs/Images/allInOne/15.png" class="h-7" alt=""> End Visit
+                        </button>
+                    </div>
                 </div>
             </div>
             <img src="./Docs/Images/Patient List 1.png"
-                class="hidden sm:block w-full rounded-l-xl h-48 sm:h-screen sm:w-4/12">
+                class="hidden sm:block right-0 absolute comeLeft top-0 w-full sm:w-4/12 h-auto max-h-full object-cover rounded-l-xl z-10">
+
         </div>
 
 
-        <div class="md:-mt-32 pb-5">
-            <div class="flex max-w-[70rem] justify-center  items-center w-full mx-auto flex-wrap gap-2 p-2">
-                <!-- Row 1 -->
-                <button class="bg-[#41795c] text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
-                    <img src="./Docs/Images/allInOne/1.png" class="h-7" alt=""> Registration
-                </button>
-                <button class="bg-[#41795c] text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
-                    <img src="./Docs/Images/allInOne/2.png" class="h-7" alt=""> Appointment Scheduling
-                </button>
-                <button class="bg-[#41795c] text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
-                    <img src="./Docs/Images/allInOne/3.png" class="h-7" alt="">Inventory
-                </button>
 
-                <!-- Row 2 -->
-                <button class="bg-[#41795c] text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
-                    <img src="./Docs/Images/allInOne/4.png" class="h-7" alt=""> Billings
-                </button>
-                <button class="bg-[#41795c] text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
-                    <img src="./Docs/Images/allInOne/5.png" class="h-7" alt=""> Marketing
-                </button>
-                <button class="bg-[#41795c] text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
-                    <img src="./Docs/Images/allInOne/6.png" class="h-7" alt=""> Conduct Revenue Analysis
-                </button>
-
-                <!-- Row 3 -->
-                <button class="bg-[#41795c] text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
-                    <img src="./Docs/Images/allInOne/7.png" class="h-7" alt=""> Alert Notification
-                </button>
-                <button class="bg-[#41795c] text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
-                    <img src="./Docs/Images/allInOne/8.png" class="h-7" alt=""> Prepare Medications
-                </button>
-                <button class="bg-[#41795c] text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
-                    <img src="./Docs/Images/allInOne/9.png" class="h-7" alt=""> Patient QR Scanning
-                </button>
-
-                <!-- Row 4 -->
-                <button class="bg-[#41795c] text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
-                    <img src="./Docs/Images/allInOne/10.png" class="h-7" alt=""> Generate Bills
-                </button>
-                <button class="bg-[#41795c] text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
-                    <img src="./Docs/Images/allInOne/11.png" class="h-7" alt=""> Consultation
-                </button>
-                <button class="bg-[#41795c] text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
-                    <img src="./Docs/Images/allInOne/12.png" class="h-7" alt=""> Promote Clinic Services
-                </button>
-
-                <!-- Row 5 -->
-                <button class="bg-[#41795c] text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
-                    <img src="./Docs/Images/allInOne/13.png" class="h-7" alt=""> Patient Demographic
-                </button>
-                <button class="bg-[#41795c] text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
-                    <img src="./Docs/Images/allInOne/14.png" class="h-7" alt=""> Reporting & Analytics
-                </button>
-                <button class="bg-[#41795c] text-white py-2 px-3 flex justify-center items-center gap-2 rounded-lg shadow-md ">
-                    <img src="./Docs/Images/allInOne/15.png" class="h-7" alt=""> End Visit
-                </button>
-            </div>
-        </div>
     </div>
 
 
@@ -651,23 +744,40 @@
 
                     <div class="w-full my-3">
                         <label for="" class="text-[#115934]">Industry</label>
-                        <div class="border border-green-600 mt-1 text-[#115934] flex justify-between items-center bg-transparent rounded-lg w-full pr-2">
-                            <input
-                                class=" text-[#115934] bg-transparent rounded-lg py-2 px-4 w-full "
-                                type="text">
-                                <i class="fa-solid fa-chevron-down"></i>
+                        <div
+                            class="border border-green-600 mt-1 text-[#115934] flex justify-between items-center bg-transparent rounded-lg w-full pr-2">
+                            <input class=" text-[#115934] bg-transparent rounded-lg py-2 px-4 w-full " type="text">
+                            <i class="fa-solid fa-chevron-down"></i>
                         </div>
                     </div>
 
+
+                    <div class="flex justify-center items-center mb-3 gap-2">
+                        <div class="w-full">
+                            <label for="" class="text-[#115934]">Phone Number</label>
+                            <input
+                                class="border border-green-600 mt-1 text-[#115934] bg-transparent rounded-lg py-2 px-4 w-full "
+                                type="number">
+                        </div>
+                        <div class="w-full">
+                            <label for="" class="text-[#115934]">Email </label>
+                            <input
+                                class="border border-green-600 mt-1 text-[#115934] bg-transparent rounded-lg py-2 px-4 w-full "
+                                type="email">
+                        </div>
+                    </div>
+
+
+
                     <label for="" class="text-[#115934]">Type Your Messaga</label>
-                    <textarea placeholder="Type Your Message"
+                    <textarea
                         class="border border-green-600 mt-1 bg-transparent rounded-lg py-2 px-4 w-full focus:outline-none text-[#115934] focus:ring-2 focus:ring-green-600 h-32"></textarea>
                     <button type="submit"
-                        class="bg-green-700 transition-all text-white py-2 px-6 rounded-lg hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-600">Submit</button>
+                        class="bg-[#115934] transition-all text-white py-2 px-6 rounded-lg hover:opacity-85 focus:outline-none focus:ring-2 focus:ring-green-600">Submit</button>
                 </form>
             </div>
 
-            <div class="hidden md:flex bg-orange-500 flex-col min-h-screen items-center h-full p-8 md:ml-20">
+            <div class="hidden md:flex bg-orange-500 flex-col  min-h-screen items-center h-full p-8 md:ml-20">
                 <div class="flex justify-end w-full">
                     <img src="./Docs/Images/form.png" class="h-20 mb-10 flex justify-end items-end" alt="">
                 </div>
