@@ -69,6 +69,8 @@
 
 
 
+    
+
 
 
 
@@ -536,7 +538,7 @@
     <div class="bg-[#115934]">
         <div class="flex flex-wrap sm:py-8 pt-8  ">
             <div class="w-full sm:w-8/12 mb-10">
-                <div class="container mx-auto h-full py-0 sm:py-10  sm:p-10">
+                <div class="container mx-auto h-full py-0 sm:py-10 max-w-[50rem] w-full sm:p-10">
                     <header class="container px-4 lg:flex mt-10 items-center h-full lg:mt-0">
                         <div class="w-full">
                             <h1 class="text-3xl pb-4 lg:text-4xl font-bold max-w-md text-white"><span
@@ -620,6 +622,12 @@
     </div>
 
 
+
+
+
+    <!-- ========= -->
+
+
     <div class=" w-full bg-[#F1E4DA]">
         <div class="grid md:grid-cols-2 grid-cols-1 rounded-lg overflow-hidden">
             <!-- Form Section -->
@@ -627,18 +635,39 @@
                 <h1 class="text-3xl font-bold text-green-800 mb-6">Request A Demo</h1>
                 <form class="">
 
-                    <div class="">
-                        <input type="text">
+                    <div class="flex justify-center items-center gap-2">
+                        <div class="w-full">
+                            <label for="" class="text-[#115934]">Full Name</label>
+                            <input
+                                class="border border-green-600 mt-1 text-[#115934] bg-transparent rounded-lg py-2 px-4 w-full "
+                                type="text">
+                        </div>
+                        <div class="w-full">
+                            <label for="" class="text-[#115934]">Organization Name </label>
+                            <input
+                                class="border border-green-600 mt-1 text-[#115934] bg-transparent rounded-lg py-2 px-4 w-full "
+                                type="text">
+                        </div>
                     </div>
-                    
-                    <label for="">Type Your Messaga</label>
+
+                    <div class="w-full my-3">
+                        <label for="" class="text-[#115934]">Industry</label>
+                        <div class="border border-green-600 mt-1 text-[#115934] flex justify-between items-center bg-transparent rounded-lg w-full pr-2">
+                            <input
+                                class=" text-[#115934] bg-transparent rounded-lg py-2 px-4 w-full "
+                                type="text">
+                                <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+
+                    <label for="" class="text-[#115934]">Type Your Messaga</label>
                     <textarea placeholder="Type Your Message"
-                        class="border border-green-600 bg-transparent rounded-lg py-2 px-4 w-full focus:outline-none focus:ring-2 focus:ring-green-600 h-32"></textarea>
+                        class="border border-green-600 mt-1 bg-transparent rounded-lg py-2 px-4 w-full focus:outline-none text-[#115934] focus:ring-2 focus:ring-green-600 h-32"></textarea>
                     <button type="submit"
-                        class="bg-green-700 text-white py-2 px-6 rounded-lg hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-600">Submit</button>
+                        class="bg-green-700 transition-all text-white py-2 px-6 rounded-lg hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-600">Submit</button>
                 </form>
             </div>
-    
+
             <div class="hidden md:flex bg-orange-500 flex-col min-h-screen items-center h-full p-8 md:ml-20">
                 <div class="flex justify-end w-full">
                     <img src="./Docs/Images/form.png" class="h-20 mb-10 flex justify-end items-end" alt="">
@@ -649,14 +678,14 @@
             </div>
         </div>
     </div>
-    
 
 
 
-    <div class="flex justify-between items-center p-5 bg-[#115934]">
+
+    <div class="flex justify-between items-center p-5 bg-[#115934] flex-col sm:flex-row gap-4">
         <img src="./Docs/Images/whiteLogo.png" class="h-8" alt="">
         <p class="text-white">© 2023 Chup. All rights reserved.</p>
-        <p class="opacity-0 select-none "> reserved.</p>
+        <p class="opacity-0 select-none hidden sm:block"> reserved.</p>
     </div>
 
 
