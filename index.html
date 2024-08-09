@@ -46,19 +46,19 @@
             <div class="items-center justify-between w-full lg:flex lg:w-auto lg:order-1 hidden" id="mobile-menu-2">
                 <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                     <li>
-                        <a href="#"
+                        <a href="#ourFeatures"
                             class="block py-2 pl-3 pr-4 text-white bg-[#115934] rounded lg:bg-transparent lg:text-[#115934] lg:p-0 dark:text-white"
                             aria-current="page">Benefits</a>
                     </li>
                     <li>
-                        <a href="#"
-                            class="block py-2 pl-3 pr-4 text-[#115934] border-b border-gray-100 hover:bg-[#115934] hover:text-white rounded mt-1 md:mt-0 transition-all lg:hover:bg-transparent lg:border-0 lg:hover:text-[#115934] lg:p-0">Chup
-                            Vs Others</a>
+                        <a href="#chupVsOther"
+                            class="block py-2 pl-3 pr-4 text-[#115934] border-b border-gray-100 hover:bg-[#115934] hover:text-white rounded mt-1 md:mt-0 transition-all lg:hover:bg-transparent lg:border-0 lg:hover:text-[#115934] lg:p-0">chup
+                            vs others</a>
                     </li>
                     <li>
                         <a href="#"
                             class="block py-2 pl-3 pr-4 text-[#115934] border-b border-gray-100 hover:bg-[#115934] hover:text-white rounded transition-all lg:hover:bg-transparent lg:border-0 lg:hover:text-[#115934] lg:p-0 ">Contact
-                            Us</a>
+                            us</a>
                     </li>
                 </ul>
             </div>
@@ -201,7 +201,7 @@
 
     <!-- Our Features -->
 
-    <div class="py-20 bd-[#FBF7F4] overflow-hidden">
+    <div class="py-20 bd-[#FBF7F4] overflow-hidden" id="ourFeatures">
         <section class="bg-white">
             <h1 class="text-center text-[#115934] text-3xl mb-8 md:text-4xl font-bold ">Our <span
                     class="text-[#F26522] "> Feature</span>
@@ -337,7 +337,7 @@
 
 
 
-    <div class="bg-[#ffede5] flex items-center justify-center min-h-screen md:p-4">
+    <div class="bg-[#ffede5] flex items-center justify-center min-h-screen md:p-4" id="chupVsOther ">
 
         <div class="max-w-4xl w-full p-2 md:p-6 pt-16">
             <h1 class="text-center text-[#115934]  text-3xl mb-8 md:text-4xl font-bold ">Chup Clinic <span
@@ -625,21 +625,13 @@
             <!-- Form Section -->
             <div class="p-8 md:mx-10 mt-10 w-full">
                 <h1 class="text-3xl font-bold text-green-800 mb-6">Request A Demo</h1>
-                <form class="space-y-4">
-                    <div class="grid grid-cols-2 gap-4">
-                        <input type="text" placeholder="Full name"
-                            class="border border-green-600 bg-transparent rounded-lg py-2 px-4 w-full focus:outline-none focus:ring-2 focus:ring-green-600">
-                        <input type="text" placeholder="Organization Name"
-                            class="border border-green-600 bg-transparent rounded-lg py-2 px-4 w-full focus:outline-none focus:ring-2 focus:ring-green-600">
+                <form class="">
+
+                    <div class="">
+                        <input type="text">
                     </div>
-                    <input type="text" placeholder="Industry"
-                        class="border border-green-600 bg-transparent rounded-lg py-2 px-4 w-full focus:outline-none focus:ring-2 focus:ring-green-600">
-                    <div class="grid grid-cols-2 gap-4">
-                        <input type="text" placeholder="Phone Number"
-                            class="border border-green-600 bg-transparent rounded-lg py-2 px-4 w-full focus:outline-none focus:ring-2 focus:ring-green-600">
-                        <input type="email" placeholder="Email"
-                            class="border border-green-600 bg-transparent rounded-lg py-2 px-4 w-full focus:outline-none focus:ring-2 focus:ring-green-600">
-                    </div>
+                    
+                    <label for="">Type Your Messaga</label>
                     <textarea placeholder="Type Your Message"
                         class="border border-green-600 bg-transparent rounded-lg py-2 px-4 w-full focus:outline-none focus:ring-2 focus:ring-green-600 h-32"></textarea>
                     <button type="submit"
@@ -647,7 +639,6 @@
                 </form>
             </div>
     
-            <!-- Illustration and Text Section (Visible only on md and above) -->
             <div class="hidden md:flex bg-orange-500 flex-col min-h-screen items-center h-full p-8 md:ml-20">
                 <div class="flex justify-end w-full">
                     <img src="./Docs/Images/form.png" class="h-20 mb-10 flex justify-end items-end" alt="">
